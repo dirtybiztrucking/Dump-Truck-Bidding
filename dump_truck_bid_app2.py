@@ -86,6 +86,7 @@ if job_type == "Tonnage":
         pdf.cell(200, 10, txt="Hauling Services Bid Summary", ln=True, align='C')
         pdf.ln(10)
         pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt=f"Company: {company_name}", ln=True)
         pdf.cell(200, 10, txt=f"Client: {client_name}", ln=True)
         pdf.cell(200, 10, txt=f"Location: {job_location}", ln=True)
         pdf.cell(200, 10, txt=f"Truck Type: {truck_type}", ln=True)
