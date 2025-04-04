@@ -104,7 +104,11 @@ if job_type == "Tonnage":
         pdf.cell(200, 10, txt=f"Profit Margin: {profit_margin:.2f}%", ln=True)
         pdf.ln(5)
         pdf.multi_cell(0, 10, f"Terms & Notes: {terms_notes}")
+        pdf.ln(10)
+        pdf.set_font("Arial", size=14)
+        pdf.cell(200, 10, txt="Estimate with confidence. Haul with Power.", ln=True, align='C')
         return pdf.output(dest="S").encode("latin1")
+
 
     pdf_data = generate_pdf()
     st.download_button("📄 Download Bid as PDF", data=pdf_data, file_name="hauling_services_bid_summary.pdf", mime="application/pdf")
@@ -148,7 +152,11 @@ elif job_type == "Hourly":
         pdf.cell(200, 10, txt=f"Total Payout: ${total_payout:,.2f}", ln=True)
         pdf.ln(5)
         pdf.multi_cell(0, 10, f"Terms & Notes: {terms_notes}")
+        pdf.ln(10)
+        pdf.set_font("Arial", size=14)
+        pdf.cell(200, 10, txt="Estimate with confidence. Haul with Power.", ln=True, align='C')
         return pdf.output(dest="S").encode("latin1")
+
 
     pdf_data_hourly = generate_hourly_pdf()
     st.download_button("📄 Download Hourly Bid as PDF", data=pdf_data_hourly, file_name="hourly_services_bid_summary.pdf", mime="application/pdf")
