@@ -7,6 +7,7 @@ st.set_page_config(page_title="Dump Truck Hauling Calculator", layout="centered"
 # --- DISPLAY LOGO ---
 logo = Image.open("logo.png")
 st.image(logo, width=250)
+st.markdown("_Estimate with confidence. Haul with Power._")
 
 
 st.title("🧮 Dump Truck Hauling Calculator")
