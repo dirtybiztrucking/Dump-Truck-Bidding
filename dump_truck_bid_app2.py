@@ -10,9 +10,6 @@ st.image(logo, width=250)
 st.markdown("**_Estimate with confidence. Haul with Power._**")
 st.title("🧮 Dump Truck Hauling Calculator")
 
-
-st.title("🧮 Dump Truck Hauling Calculator")
-
 # --- CLIENT INFO ---
 st.header("🧾 Client Information")
 client_name = st.text_input("Client Name")
