@@ -145,6 +145,9 @@ elif job_type == "Hourly":
         pdf.cell(200, 10, txt=f"Total Hours: {total_hours}", ln=True)
         pdf.cell(200, 10, txt=f"Hourly Rate per Truck: ${hourly_rate_per_truck:.2f}", ln=True)
         pdf.cell(200, 10, txt=f"Total Payout: ${total_payout:,.2f}", ln=True)
+        pdf.cell(200, 10, txt=f"Total Payout: ${total_payout:,.2f}", ln=True)
+        pdf.ln(5)
+        pdf.multi_cell(0, 10, f"Terms & Notes: {terms_notes}")
         return pdf.output(dest="S").encode("latin1")
 
     pdf_data_hourly = generate_hourly_pdf()
