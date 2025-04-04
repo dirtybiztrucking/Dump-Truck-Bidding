@@ -10,6 +10,11 @@ st.image(logo, width=250)
 
 st.title("🚛 Dump Truck Profitability Calculator")
 
+# --- CLIENT INFO ---
+st.header("🧾 Client Information")
+client_name = st.text_input("Client Name")
+job_location = st.text_input("Job Location")
+
 # --- JOB TYPE SELECTION ---
 st.header("🔧 Job Type")
 job_type = st.selectbox("Is this an hourly job or a tonnage job?", ["Hourly", "Tonnage"])
@@ -78,6 +83,8 @@ if job_type == "Tonnage":
         pdf.cell(200, 10, txt="Hauling Services Bid Summary", ln=True, align='C')
         pdf.ln(10)
         pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt=f"Client: {client_name}", ln=True)
+        pdf.cell(200, 10, txt=f"Location: {job_location}", ln=True)
         pdf.cell(200, 10, txt=f"Truck Type: {truck_type}", ln=True)
         pdf.cell(200, 10, txt=f"Material Type: {material_type}", ln=True)
         pdf.cell(200, 10, txt=f"Total Loads: {total_loads}", ln=True)
@@ -122,6 +129,8 @@ elif job_type == "Hourly":
         pdf.cell(200, 10, txt="Hourly Services Bid Summary", ln=True, align='C')
         pdf.ln(10)
         pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt=f"Client: {client_name}", ln=True)
+        pdf.cell(200, 10, txt=f"Location: {job_location}", ln=True)
         pdf.cell(200, 10, txt=f"Truck Type: {truck_type}", ln=True)
         pdf.cell(200, 10, txt=f"Material Type: {material_type}", ln=True)
         pdf.cell(200, 10, txt=f"Total Trucks: {num_trucks}", ln=True)
