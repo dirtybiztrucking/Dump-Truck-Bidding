@@ -7,7 +7,7 @@ st.set_page_config(page_title="Dirty Biz Hauling Calculator", layout="centered")
 # --- DISPLAY LOGO ---
 logo = Image.open("logo.png")
 st.image(logo, width=250)
-st.markdown("**DIRTY BIZ TRUCKING**  ")
+st.markdown("**DIRTY BIZ TRUCKING**")
 st.markdown("_Precision Hauling Estimates for Real Work._")
 
 st.title("🧮 Dirty Biz Hauling Calculator")
