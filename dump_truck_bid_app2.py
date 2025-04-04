@@ -12,6 +12,7 @@ st.title("🧮 Dump Truck Hauling Calculator")
 
 # --- CLIENT INFO ---
 st.header("🧾 Client Information")
+company_name = st.text_input("Your Company Name")
 client_name = st.text_input("Client Name")
 job_location = st.text_input("Job Location")
 
@@ -129,6 +130,7 @@ elif job_type == "Hourly":
         pdf.cell(200, 10, txt="Hourly Services Bid Summary", ln=True, align='C')
         pdf.ln(10)
         pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt=f"Company: {company_name}", ln=True)
         pdf.cell(200, 10, txt=f"Client: {client_name}", ln=True)
         pdf.cell(200, 10, txt=f"Location: {job_location}", ln=True)
         pdf.cell(200, 10, txt=f"Truck Type: {truck_type}", ln=True)
