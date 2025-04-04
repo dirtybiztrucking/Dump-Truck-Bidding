@@ -101,6 +101,9 @@ if job_type == "Tonnage":
         pdf.cell(200, 10, txt=f"Cost per Mile: ${cost_per_mile_final:,.2f}", ln=True)
         pdf.cell(200, 10, txt=f"Cost per Hour: ${cost_per_hour:,.2f}", ln=True)
         pdf.cell(200, 10, txt=f"Profit Margin: {profit_margin:.2f}%", ln=True)
+        pdf.cell(200, 10, txt=f"Profit Margin: {profit_margin:.2f}%", ln=True)
+        pdf.ln(5)
+        pdf.multi_cell(0, 10, f"Terms & Notes: {terms_notes}")
         return pdf.output(dest="S").encode("latin1")
 
     pdf_data = generate_pdf()
